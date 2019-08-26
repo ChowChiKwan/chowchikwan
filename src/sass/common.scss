@@ -1,0 +1,54 @@
+@import "element-variables";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  color: $--color-text-regular;
+}
+
+.clearfix::before,
+.clearfix::after {
+  position: relative;
+  display: table;
+  content: '';
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
