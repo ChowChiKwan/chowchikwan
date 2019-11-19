@@ -37,6 +37,7 @@
     "fundebug-javascript": "^1.8.2",
     "fundebug-vue": "^0.0.1",
     "moment": "^2.24.0",
+    "prerender-spa-plugin": "^3.4.0",
     "vue": "^2.5.17",
     "vue-i18n": "^8.1.0",
     "vue-router": "^3.0.1",

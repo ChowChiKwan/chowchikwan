@@ -10,6 +10,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+
 const webpackBaseConfig = require('./webpack.base.js');
 
 const APP_PATH = resolve(__dirname, 'src');
@@ -53,6 +55,13 @@ module.exports = webpackMerge(webpackBaseConfig, {
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
+    }),
+    new PrerenderSPAPlugin({
+      staticDir: BUILD_PATH,
+      routes: ['/'],
+      renderer: new PrerenderSPAPlugin.PuppeteerRenderer({//这样写renderAfterTime生效了
+        renderAfterTime: 5000
+      }),
     }),
   ],
 });

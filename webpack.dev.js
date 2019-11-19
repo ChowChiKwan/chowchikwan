@@ -24,9 +24,6 @@ const webpackDevConfig = webpackMerge(webpackBaseConfig, {
     contentBase: APP_PATH,
     compress: true,
     historyApiFallback: true,
-    allowedHosts: [
-      '.midea.com',
-    ],
     hot: true,
     open: true,
     overlay: {
